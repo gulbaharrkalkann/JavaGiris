@@ -1,0 +1,31 @@
+DesignPattern.Observer adı üzerinde gözlemci, izleyici, gözcü yahut gözetmen diye
+nitelendirilen, anlamı gibi işlev gören bir tasarım desenidir. Elimizdeki
+ mevcut nesnenin durumunda herhangi bir değişiklik olduğunda, bu
+ değişiklerden diğer nesneleri haberdar eden bir tasarımdan bahsediyoruz.
+ Dahada net bir şekilde bahsetmek gerekirse, elimizdeki “x” nesnesinin “y”
+ özelliğinde bir güncellenme, değişiklik yahut belirli bir şartın gerçekleşmesi
+ gibi bir durum cereyan ettiğinde bu “x” nesnesini -izleyen- -gözleyen- diğer
+ “z”, “w”, “k” vs. nesnelerine bu yeni durumu bildiren sisteme DesignPattern.Observer
+ tasarım deseni diyoruz.
+ ÖRNEĞİN
+ Elimizde bir Öğrenci nesnesi olsun. Bu Öğrenciyi takip eden; Anne,
+ Baba ve Öğretmen nesneleri olsun. Okul, Öğrenci dersi astığı zaman
+ onu takip eden Annesine, Babasına ve Öğretmenine direkt olarak bu
+ durumu haber veriyor olsun.
+
+ DesignPattern.Observer Design Pattern’de;
+
+ Subject
+ Takip edilecek nesneyi Subject terimiyle ifade etmekteyiz. Yukarıdaki
+ örnek olayda Öğrenci nesnesi bizim Subject’timiz olmaktadır.
+ DesignPattern.Observer
+ Subject’i takip edecek olan aboneler tek tip olmayabilirler. Yukarıdaki
+ örnek olayımızda Subject’i, hem Ana, hem Baba hemde Öğretmen
+ nesneleri takip etmektedirler. İşte böyle bir durumda birden fazla tipe
+ arayüz görevi görecek abstract yahut interface yapımıza DesignPattern.Observer
+ denmektedir. Anlayacağınız örnek olayımızda Öğrenci nesnemizi takip
+ edenlerin birden fazla tip olmasını sağlayan o sistem DesignPattern.Observer
+ arayüzüdür.
+ Concrete
+ Subject’i takip eden nesnelerdir. Yukarıdaki örnek olayımızda; Anne,
+ Baba ve Öğretmen nesneleri Concrete nesneleridir.

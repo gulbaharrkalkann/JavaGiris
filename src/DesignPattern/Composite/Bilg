@@ -1,0 +1,37 @@
+DesignPattern.Composite Design Pattern Nedir?
+
+Bazen yazılım tasarımları süreçlerinde nesnelerin ağaç yapıları halinde
+oluşturulması ve ardından bu yapılarla tek tek nesnelermiş gibi çalışılması
+gerekebilir. İşte böyle durumlarda DesignPattern.Composite pattern tasarımsal açıdan
+imdadınıza yetişebilir.
+
+DesignPattern.Composite pattern, kendi içlerinde birbirlerinden farklı olan bir grup
+nesnenin sanki tek bir bütün nesneymiş gibi kullanılmasını sağlamaktadır.
+Böylece farklı nesneleri bir ağaç yapısında birleştirip genel anlamda parça
+bütün ilişkisini yeniden düzenleyip şekillendirmektedir.
+Bu yaklaşımın en büyük yararı, ağaç yapısını oluşturan alt kırılım sınıflarıyla
+ ilgilenmemize gerek olmamasıdır. Yani bir nesnenin basit bir ürün mü yoksa
+ içinde birden fazla ürün ve kutu barındıran karmaşık bir kutu mu olup
+ olmadığını bilmemize gerek yoktur. Ortak bir arayüz aracılığıyla her iki
+nesnede aynı muameleyi görecektir. Bu arayüz sayesinde tetiklenen metot
+üzerinden nesneler bu tetiklenmeyi ağaçtan aşağı ileterek operasyonun
+ yürütülmesini sağlayacaktır.
+
+ DesignPattern.Composite Design Pattern’ın Stratejisi
+
+ DesignPattern.Composite pattern’ın uygulanacağı ağaç yapıları misali tasarımlarda
+  Component, DesignPattern.Composite ve Leaf isimlerinde olmak üzere üç farklı
+   sorumlulukta sınıf tasarlanması gerekmektedir.
+
+
+Component
+Ağaç yapısındaki basit ve karmaşık nesneleri ve bu nesnelerin ortak
+alanlarını açıklayan abstract sınıftır.
+DesignPattern.Composite
+Ağaç yapısındaki karmaşık nesnelere karşılık gelen sınıftır. Daha teknik
+ bir izahatte bulunmamız gerekirse eğer Component‘lerin bir araya
+  geldiği ve ağaç yapısındaki alt kırılımları oluşturan kompleks nesneleri
+  temsil etmektedir.
+Leaf
+Ağaç yapısındaki en temel unsuru olan ve alt kırılım barındırmayan tek
+bir Component nesnesidir. Yani basit nesneyi ifade eder.
